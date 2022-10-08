@@ -8,7 +8,16 @@ import { promisify } from "util";
 import { User } from "./models/User.js";
 import { Post } from "./models/Post.js";
 
+// In order to run in local redis
+// 1. create a redis container
+// docker run -d --name redisLocal -p 127.0.0.1:6379:6379 redis
+// 2 change this
+// const client = redis.createClient(6379,'127.0.0.1');
+// 3. in cmd we can see the the cache storage
+//  redis-cli
+//  get allusers
 // create redis client
+
 const client = redis.createClient({
   host: process.env.REDIS_HOST,
   port: parseInt(process.env.REDIS_PORT),
