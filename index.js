@@ -14,7 +14,7 @@ import { Post } from "./models/Post.js";
 // 2 change this
 // const client = redis.createClient(6379,'127.0.0.1');
 // 3. in cmd we can see the the cache storage
-//  redis-cli
+// docker exec -it redisLocal redis-cli
 //  get allusers
 // create redis client
 
